@@ -1,0 +1,23 @@
+server:
+  servlet:
+    context-path: /psl #追加路径前缀
+spring:
+  messages:
+    basename: /config/project  #读取配置文件
+  profiles:
+    active: dev #定义默认生效环境
+---
+spring:
+  profiles:dev #开发服务
+server:
+  port: 8080
+---
+spring:
+  profiles:beta
+server:
+  port: 8888 #测试服务
+---
+spring:
+  profiles:product #生产服务
+server:
+  port: 8070

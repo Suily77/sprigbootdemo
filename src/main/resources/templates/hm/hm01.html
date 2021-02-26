@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="${url}"></p>
+    <p th:text="${mid}"></p>
+
+    <p th:text="'官网:'+${url}"></p>
+    <p th:text="${mid}"></p>
+
+    <p th:text="#{welcome.url}"></p>
+
+    <p th:text="${oa.name}"></p>
+    <div th:object="${oa}">
+        <table style="border: 1px solid #000000">
+                <tr th:text="'姓名：'+*{name}"></tr>
+                <tr th:text="'年龄'+*{age}"></tr>
+                <tr th:text="'性别'+*{age}"></tr>
+                <tr th:text="'地址：'+*{address}"></tr>
+                <tr th:text="'手机号码：'+*{phone}"></tr>
+        </table>
+    </div>
+
+</body>
+</html>
