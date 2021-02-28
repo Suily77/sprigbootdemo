@@ -6,6 +6,11 @@ spring:
     basename: /config/project  #读取配置文件
   profiles:
     active: dev #定义默认生效环境
+c3p0:
+  jdbcUrl:jdbc:mysql://localhost:3306/stu
+  user:root
+  password:root
+  driverClass:com.mysql.cj.jdbc.Driver
 ---
 spring:
   profiles:dev #开发服务
