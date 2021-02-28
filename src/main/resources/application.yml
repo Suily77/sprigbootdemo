@@ -1,11 +1,11 @@
 server:
   servlet:
-    context-path: /psl #×·¼ÓÂ·¾¶Ç°×º
+    context-path: /psl #è¿½åŠ è·¯å¾„å‰ç¼€
 spring:
   messages:
-    basename: /config/project  #¶ÁÈ¡ÅäÖÃÎÄ¼ş
+    basename: /config/project  #è¯»å–é…ç½®æ–‡ä»¶
   profiles:
-    active: dev #¶¨ÒåÄ¬ÈÏÉúĞ§»·¾³
+    active: dev #å®šä¹‰é»˜è®¤ç”Ÿæ•ˆç¯å¢ƒ
 c3p0:
   jdbcUrl:jdbc:mysql://localhost:3306/stu
   user:root
@@ -13,16 +13,16 @@ c3p0:
   driverClass:com.mysql.cj.jdbc.Driver
 ---
 spring:
-  profiles:dev #¿ª·¢·şÎñ
+  profiles:dev #å¼€å‘æœåŠ¡
 server:
   port: 8080
 ---
 spring:
   profiles:beta
 server:
-  port: 8888 #²âÊÔ·şÎñ
+  port: 8888 #æµ‹è¯•æœåŠ¡
 ---
 spring:
-  profiles:product #Éú²ú·şÎñ
+  profiles:product #ç”Ÿäº§æœåŠ¡
 server:
   port: 8070
